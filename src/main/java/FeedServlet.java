@@ -46,12 +46,14 @@ public class FeedServlet extends HttpServlet {
         int k = feedBean.calAdd(i,j);
         List<String> lis = feedBean.calAdList(l); 
         ListIterator<String> itr=lis.listIterator();
+        List<String> ts = calBean.getTime();
+        ListIterator<String> itt = ts.listIterator();
         out.println("Addition is: " + k + "\n");
         
-        out.println("\nAddition done by following people: ");
+        out.println("\nAddition done by following people at following time: ");
         while (itr.hasNext())
         {
-            out.println("\n" + itr.next());
+            out.println("\n" + itr.next() + " on time: " + itt.next());
         }
     }
 }
