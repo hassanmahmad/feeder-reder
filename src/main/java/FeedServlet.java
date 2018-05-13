@@ -46,7 +46,7 @@ public class FeedServlet extends HttpServlet {
         int k = feedBean.calAdd(i,j);
         List<String> lis = feedBean.calAdList(l); 
         ListIterator<String> itr=lis.listIterator();
-        List<String> ts = calBean.getTime();
+        List<String> ts = feedBean.getTime();
         ListIterator<String> itt = ts.listIterator();
         out.println("Addition is: " + k + "\n");
         
